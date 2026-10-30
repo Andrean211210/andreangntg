@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>.:: KICK SUPPLY ::.</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f7f5;
+            color: #222;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            background: #0b3d2e;
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            color: white;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #39ff88;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #39ff88;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 550px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(3, 35, 24, 0.82),
+                    rgba(3, 35, 24, 0.82)
+                ),
+                url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: #39ff88;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+            display: inline-block;
+
+            padding: 15px 35px;
+
+            background: #39ff88;
+            color: #063524;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background: white;
+            transform: translateY(-4px);
+        }
+
+
+        /* ================= WELCOME ================= */
+
+        .welcome {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .welcome h2 {
+            font-size: 38px;
+            color: #0b3d2e;
+            margin-bottom: 20px;
+        }
+
+        .welcome h2 span {
+            color: #20b862;
+        }
+
+        .welcome p {
+            max-width: 850px;
+            margin: 12px auto;
+
+            color: #555;
+
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* ================= KEUNGGULAN ================= */
+
+        .features {
+            padding: 20px 8% 80px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .feature {
+            background: white;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-8px);
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #0b3d2e;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .feature p {
+            color: #777;
+            line-height: 1.6;
+        }
+
+
+        /* ================= PRODUK ================= */
+
+        .products {
+            background: #0b3d2e;
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .products h2 {
+            color: white;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .products h2 span {
+            color: #39ff88;
+        }
+
+        .products > p {
+            color: #bbb;
+            margin-bottom: 40px;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 16px;
+
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-icon {
+            font-size: 70px;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            color: #0b3d2e;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #20b862;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+
+        /* ================= WARNING ================= */
+
+        .warning {
+            margin: 50px auto;
+
+            width: 80%;
+
+            padding: 20px;
+
+            background: #fff3f3;
+
+            border-left: 6px solid red;
+
+            color: red;
+
+            font-size: 17px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #06291e;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+            color: #39ff88;
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #aaa;
+            margin: 5px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .features,
+            .product-list {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            KICK<span>SUPPLY</span>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="produk.html">Produk</a>
+            </li>
+
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+
+            <li>
+                <a href="#">Kontak</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                WELCOME TO THE
+                <span>ULTIMATE FOOTBALL HEAVEN</span>
+            </h1>
+
+            <p>
+                Temukan perlengkapan sepak bola dan futsal
+                terbaik untuk mendukung aksi terbaikmu
+                di lapangan Bandung.
+            </p>
+
+            <a href="produk.html" class="hero-button">
+                🛒 BELANJA SEKARANG
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WELCOME ================= -->
+
+    <section class="welcome">
+
+        <h2>
+            SELAMAT DATANG DI
+            <span>KICK SUPPLY</span>
+        </h2>
+
+        <p>
+            Welcome to the Ultimate Football Pitstop!
+            KICK SUPPLY merupakan pusat perlengkapan
+            sepak bola dan futsal terlengkap untuk
+            menunjang aksi terbaikmu di lapangan.
+        </p>
+
+        <p>
+            Kami menyediakan berbagai koleksi perlengkapan
+            sepak bola berkualitas, mulai dari sepatu,
+            jersey, bola, sarung tangan, hingga berbagai
+            aksesoris lainnya.
+        </p>
+
+        <p>
+            Silakan pilih barang yang kamu sukai
+            dan selamat berbelanja!
+        </p>
+
+    </section>
+
+
+    <!-- ================= KEUNGGULAN ================= -->
+
+    <section class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ⚽
+            </div>
+
+            <h3>
+                Produk Lengkap
+            </h3>
+
+            <p>
+                Berbagai kebutuhan sepak bola dan futsal
+                tersedia di KICK SUPPLY.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🏆
+            </div>
+
+            <h3>
+                Kualitas Premium
+            </h3>
+
+            <p>
+                Kami menyediakan produk berkualitas
+                untuk mendukung performa terbaikmu.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🚚
+            </div>
+
+            <h3>
+                Belanja Mudah
+            </h3>
+
+            <p>
+                Pilih produk favoritmu dan nikmati
+                pengalaman berbelanja yang mudah.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUK UNGGULAN ================= -->
+
+    <section class="products">
+
+        <h2>
+            PRODUK <span>POPULER</span>
+        </h2>
+
+        <p>
+            Beberapa perlengkapan sepak bola favorit
+            di KICK SUPPLY.
+        </p>
+
+
+        <div class="product-list">
+
+
+            <!-- PRODUK 1 -->
+
+            <div class="product">
+
+                <div class="product-icon">
+                    👟
+                </div>
+
+                <h3>
+                    Adidas Predator
+                </h3>
+
+                <p>
+                    Sepatu sepak bola premium
+                    untuk performa maksimal.
+                </p>
+
+                <div class="price">
+                    Rp 1.300.000
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 2 -->
+
+            <div class="product">
+
+                <div class="product-icon">
+                    👕
+                </div>
+
+                <h3>
+                    Jersey Nike
+                </h3>
+
+                <p>
+                    Jersey sepak bola nyaman
+                    dan stylish.
+                </p>
+
+                <div class="price">
+                    Rp 1.000.000
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 3 -->
+
+            <div class="product">
+
+                <div class="product-icon">
+                    ⚽
+                </div>
+
+                <h3>
+                    Bola Ortuseight
+                </h3>
+
+                <p>
+                    Bola sepak untuk latihan
+                    dan pertandingan.
+                </p>
+
+                <div class="price">
+                    Rp 650.000
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WARNING ================= -->
+
+    <div class="warning">
+
+        <strong>⚠️ Waspada:</strong>
+        Latihan Praktek.
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            KICKSUPPLY ⚽
+        </h3>
+
+        <p>
+            Your Football Gear, Your Best Performance.
+        </p>
+
+        <p>
+            © 2026 KICKSUPPLY. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

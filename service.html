@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>.:: KICK SUPPLY | Service ::.</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f7f5;
+            color: #222;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            background: #0b3d2e;
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            color: white;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #39ff88;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #39ff88;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .service-hero {
+
+            min-height: 430px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(3, 35, 24, 0.85),
+                    rgba(3, 35, 24, 0.85)
+                ),
+                url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+        }
+
+        .service-hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .service-hero h1 span {
+            color: #39ff88;
+        }
+
+        .service-hero p {
+            max-width: 700px;
+            margin: auto;
+
+            color: #ddd;
+
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+
+        /* ================= INTRO ================= */
+
+        .intro {
+            padding: 70px 8%;
+
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: #0b3d2e;
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+        .intro h2 span {
+            color: #20b862;
+        }
+
+        .intro p {
+            max-width: 800px;
+
+            margin: auto;
+
+            color: #666;
+
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* ================= SERVICE CARD ================= */
+
+        .services {
+
+            padding: 20px 8% 80px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .service-card {
+
+            background: white;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            border-bottom: 5px solid #20b862;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+
+            width: 80px;
+            height: 80px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+
+            background: #e7f9ee;
+
+            font-size: 40px;
+        }
+
+        .service-card h3 {
+
+            color: #0b3d2e;
+
+            margin-bottom: 12px;
+
+            font-size: 21px;
+        }
+
+        .service-card p {
+
+            color: #777;
+
+            line-height: 1.7;
+
+            font-size: 15px;
+        }
+
+
+        /* ================= STEPS ================= */
+
+        .steps {
+
+            background: #0b3d2e;
+
+            padding: 70px 8%;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .steps h2 {
+
+            font-size: 36px;
+
+            margin-bottom: 45px;
+        }
+
+        .steps h2 span {
+
+            color: #39ff88;
+        }
+
+        .step-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .step {
+
+            padding: 25px;
+        }
+
+        .step-number {
+
+            width: 55px;
+            height: 55px;
+
+            margin: 0 auto 15px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #39ff88;
+
+            color: #063524;
+
+            font-weight: bold;
+
+            font-size: 20px;
+        }
+
+        .step h3 {
+
+            margin-bottom: 10px;
+        }
+
+        .step p {
+
+            color: #bbb;
+
+            line-height: 1.6;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+
+            padding: 70px 8%;
+
+            text-align: center;
+        }
+
+        .contact h2 {
+
+            color: #0b3d2e;
+
+            font-size: 35px;
+
+            margin-bottom: 15px;
+        }
+
+        .contact h2 span {
+
+            color: #20b862;
+        }
+
+        .contact p {
+
+            color: #666;
+
+            margin-bottom: 25px;
+        }
+
+        .contact-btn {
+
+            display: inline-block;
+
+            padding: 14px 35px;
+
+            background: #0b3d2e;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+
+            background: #20b862;
+
+            color: #063524;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background: #06291e;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+
+            color: #39ff88;
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        footer p {
+
+            color: #aaa;
+
+            margin: 5px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .services {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .step-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 550px) {
+
+            .service-hero h1 {
+                font-size: 38px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .step-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            KICK<span>SUPPLY</span>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="produk.html">
+                    Produk
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About Us
+                </a>
+            </li>
+
+            <li>
+                <a href="service.html">
+                    Service
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="service-hero">
+
+        <div>
+
+            <h1>
+                OUR
+                <span>SERVICE</span>
+            </h1>
+
+            <p>
+                KICK SUPPLY tidak hanya menyediakan
+                perlengkapan sepak bola, tetapi juga
+                memberikan pelayanan terbaik untuk
+                pengalaman berbelanja yang nyaman.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRO ================= -->
+
+    <section class="intro">
+
+        <h2>
+            LAYANAN <span>KICK SUPPLY</span>
+        </h2>
+
+        <p>
+            Kami berusaha memberikan pelayanan terbaik
+            mulai dari pemilihan produk, pembayaran,
+            hingga produk sampai ke tangan pelanggan.
+        </p>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services">
+
+
+        <!-- SERVICE 1 -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                👟
+            </div>
+
+            <h3>
+                Konsultasi Produk
+            </h3>
+
+            <p>
+                Bingung memilih sepatu atau perlengkapan
+                yang sesuai? Tim kami siap membantu
+                memberikan informasi mengenai produk.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICE 2 -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                👕
+            </div>
+
+            <h3>
+                Custom Jersey
+            </h3>
+
+            <p>
+                Buat jersey tim sendiri dengan desain,
+                nama, nomor punggung, dan warna sesuai
+                keinginan.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICE 3 -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                📦
+            </div>
+
+            <h3>
+                Pengiriman
+            </h3>
+
+            <p>
+                Produk dikemas dengan aman sebelum
+                dikirim agar sampai kepada pelanggan
+                dalam kondisi baik.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICE 4 -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                💳
+            </div>
+
+            <h3>
+                Pembayaran Mudah
+            </h3>
+
+            <p>
+                Nikmati berbagai pilihan pembayaran
+                seperti transfer bank, QRIS, e-wallet,
+                dan kartu.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICE 5 -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🔄
+            </div>
+
+            <h3>
+                Penukaran Produk
+            </h3>
+
+            <p>
+                Tersedia layanan penukaran produk
+                sesuai dengan ketentuan yang berlaku
+                di KICK SUPPLY.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICE 6 -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                💬
+            </div>
+
+            <h3>
+                Customer Support
+            </h3>
+
+            <p>
+                Tim customer support siap membantu
+                menjawab pertanyaan dan memberikan
+                informasi mengenai pesanan.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ================= CARA BELANJA ================= -->
+
+    <section class="steps">
+
+        <h2>
+            CARA <span>BERBELANJA</span>
+        </h2>
+
+
+        <div class="step-container">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h3>
+                    Pilih Produk
+                </h3>
+
+                <p>
+                    Pilih perlengkapan sepak bola
+                    yang kamu inginkan.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h3>
+                    Konfirmasi
+                </h3>
+
+                <p>
+                    Hubungi kami untuk melakukan
+                    konfirmasi pesanan.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h3>
+                    Pembayaran
+                </h3>
+
+                <p>
+                    Lakukan pembayaran menggunakan
+                    metode yang tersedia.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <h3>
+                    Pesanan Dikirim
+                </h3>
+
+                <p>
+                    Pesanan akan diproses dan
+                    dikirim ke alamat tujuan.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact">
+
+        <h2>
+            BUTUH <span>BANTUAN?</span>
+        </h2>
+
+        <p>
+            Jangan ragu untuk menghubungi KICK SUPPLY
+            jika kamu memiliki pertanyaan.
+        </p>
+
+        <a href="#" class="contact-btn">
+            💬 Hubungi Kami
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            KICKSUPPLY ⚽
+        </h3>
+
+        <p>
+            Your Football Gear, Your Best Performance.
+        </p>
+
+        <p>
+            © 2026 KICKSUPPLY. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

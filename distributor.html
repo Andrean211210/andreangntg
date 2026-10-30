@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>.:: KICK SUPPLY | Distributor ::.</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f7f5;
+            color: #222;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            background: #0b3d2e;
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            color: white;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #39ff88;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #39ff88;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+
+            min-height: 480px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(3,35,24,0.86),
+                    rgba(3,35,24,0.86)
+                ),
+                url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #39ff88;
+        }
+
+        .hero p {
+            color: #ddd;
+            font-size: 19px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+
+            display: inline-block;
+
+            background: #39ff88;
+            color: #063524;
+
+            padding: 15px 35px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background: white;
+            transform: translateY(-4px);
+        }
+
+
+        /* ================= INTRO ================= */
+
+        .intro {
+
+            padding: 70px 8%;
+
+            text-align: center;
+        }
+
+        .intro h2 {
+
+            color: #0b3d2e;
+
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+        .intro h2 span {
+            color: #20b862;
+        }
+
+        .intro p {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            color: #666;
+
+            line-height: 1.8;
+
+            font-size: 17px;
+        }
+
+
+        /* ================= KEUNTUNGAN ================= */
+
+        .benefits {
+
+            padding: 10px 8% 80px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .benefit {
+
+            background: white;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            border-top: 5px solid #20b862;
+
+            transition: 0.3s;
+        }
+
+        .benefit:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .icon {
+
+            font-size: 50px;
+
+            margin-bottom: 15px;
+        }
+
+        .benefit h3 {
+
+            color: #0b3d2e;
+
+            margin-bottom: 10px;
+        }
+
+        .benefit p {
+
+            color: #777;
+
+            line-height: 1.6;
+        }
+
+
+        /* ================= PRODUK DISTRIBUTOR ================= */
+
+        .products {
+
+            background: #0b3d2e;
+
+            padding: 70px 8%;
+
+            text-align: center;
+        }
+
+        .products h2 {
+
+            color: white;
+
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+        .products h2 span {
+            color: #39ff88;
+        }
+
+        .products > p {
+
+            color: #bbb;
+
+            margin-bottom: 40px;
+        }
+
+        .product-list {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .product {
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-icon {
+
+            font-size: 55px;
+
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+
+            color: #0b3d2e;
+
+            margin-bottom: 10px;
+        }
+
+        .product p {
+
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        /* ================= CARA KERJA ================= */
+
+        .steps {
+
+            padding: 70px 8%;
+
+            text-align: center;
+        }
+
+        .steps h2 {
+
+            color: #0b3d2e;
+
+            font-size: 36px;
+
+            margin-bottom: 45px;
+        }
+
+        .steps h2 span {
+            color: #20b862;
+        }
+
+        .step-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .step {
+
+            padding: 25px;
+        }
+
+        .number {
+
+            width: 60px;
+            height: 60px;
+
+            margin: auto auto 15px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #0b3d2e;
+
+            color: #39ff88;
+
+            font-size: 22px;
+
+            font-weight: bold;
+        }
+
+        .step h3 {
+
+            color: #0b3d2e;
+
+            margin-bottom: 10px;
+        }
+
+        .step p {
+
+            color: #777;
+
+            line-height: 1.6;
+        }
+
+
+        /* ================= FORM ================= */
+
+        .form-section {
+
+            background: #e9f7ee;
+
+            padding: 70px 8%;
+
+        }
+
+        .form-box {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .form-box h2 {
+
+            text-align: center;
+
+            color: #0b3d2e;
+
+            margin-bottom: 10px;
+        }
+
+        .form-box > p {
+
+            text-align: center;
+
+            color: #777;
+
+            margin-bottom: 30px;
+        }
+
+        label {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #0b3d2e;
+
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+
+            width: 100%;
+
+            padding: 13px;
+
+            margin-bottom: 18px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+
+            border-color: #20b862;
+        }
+
+        textarea {
+
+            height: 120px;
+
+            resize: none;
+        }
+
+        .submit {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #0b3d2e;
+
+            color: white;
+
+            font-weight: bold;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .submit:hover {
+
+            background: #20b862;
+
+            color: #063524;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background: #06291e;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+
+            color: #39ff88;
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        footer p {
+
+            color: #aaa;
+
+            margin: 5px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .product-list {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .step-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .benefits,
+            .product-list,
+            .step-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            KICK<span>SUPPLY</span>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="produk.html">
+                    Produk
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About Us
+                </a>
+            </li>
+
+            <li>
+                <a href="service.html">
+                    Service
+                </a>
+            </li>
+
+            <li>
+                <a href="distributor.html">
+                    Distributor
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                KICK <span>SUPPLY</span>
+                DISTRIBUTOR
+            </h1>
+
+            <p>
+                Solusi kebutuhan perlengkapan sepak bola
+                untuk toko, klub, sekolah, akademi,
+                komunitas, dan reseller.
+            </p>
+
+            <a href="#daftar" class="hero-button">
+                🤝 DAFTAR SEBAGAI DISTRIBUTOR
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRO ================= -->
+
+    <section class="intro">
+
+        <h2>
+            PARTNER <span>KICK SUPPLY</span>
+        </h2>
+
+        <p>
+            KICK SUPPLY membuka peluang kerja sama
+            bagi kamu yang ingin mengembangkan bisnis
+            perlengkapan sepak bola. Kami menyediakan
+            berbagai produk seperti sepatu, jersey,
+            bola, sarung tangan, dan aksesoris sepak bola
+            untuk kebutuhan dalam jumlah kecil maupun besar.
+        </p>
+
+    </section>
+
+
+    <!-- ================= BENEFITS ================= -->
+
+    <section class="benefits">
+
+
+        <div class="benefit">
+
+            <div class="icon">
+                📦
+            </div>
+
+            <h3>
+                Produk Beragam
+            </h3>
+
+            <p>
+                Berbagai perlengkapan sepak bola tersedia
+                untuk memenuhi kebutuhan bisnis dan tim.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="icon">
+                💰
+            </div>
+
+            <h3>
+                Harga Distributor
+            </h3>
+
+            <p>
+                Dapatkan penawaran harga khusus untuk
+                pembelian dalam jumlah tertentu.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="icon">
+                🚚
+            </div>
+
+            <h3>
+                Pengiriman
+            </h3>
+
+            <p>
+                Pesanan dapat dikirim ke berbagai wilayah
+                sesuai dengan kesepakatan pengiriman.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="icon">
+                🏪
+            </div>
+
+            <h3>
+                Untuk Toko & Reseller
+            </h3>
+
+            <p>
+                Cocok untuk toko olahraga dan reseller
+                yang ingin menambah koleksi produk.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="icon">
+                ⚽
+            </div>
+
+            <h3>
+                Untuk Klub & Akademi
+            </h3>
+
+            <p>
+                Mendukung kebutuhan perlengkapan klub,
+                sekolah sepak bola, dan akademi.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="icon">
+                🤝
+            </div>
+
+            <h3>
+                Kerja Sama
+            </h3>
+
+            <p>
+                Bangun kerja sama jangka panjang bersama
+                KICK SUPPLY.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ================= PRODUK ================= -->
+
+    <section class="products">
+
+        <h2>
+            PRODUK <span>DISTRIBUTOR</span>
+        </h2>
+
+        <p>
+            Pilihan produk yang dapat digunakan untuk
+            kebutuhan bisnis dan tim.
+        </p>
+
+
+        <div class="product-list">
+
+
+            <div class="product">
+
+                <div class="product-icon">
+                    👟
+                </div>
+
+                <h3>
+                    Sepatu Bola
+                </h3>
+
+                <p>
+                    Berbagai model sepatu sepak bola
+                    untuk pemain.
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-icon">
+                    👕
+                </div>
+
+                <h3>
+                    Jersey
+                </h3>
+
+                <p>
+                    Jersey untuk individu, klub,
+                    komunitas, dan akademi.
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-icon">
+                    ⚽
+                </div>
+
+                <h3>
+                    Bola
+                </h3>
+
+                <p>
+                    Bola untuk latihan maupun
+                    pertandingan.
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-icon">
+                    🧤
+                </div>
+
+                <h3>
+                    Sarung Tangan
+                </h3>
+
+                <p>
+                    Perlengkapan kiper untuk
+                    latihan dan pertandingan.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CARA KERJA ================= -->
+
+    <section class="steps">
+
+        <h2>
+            CARA MENJADI <span>DISTRIBUTOR</span>
+        </h2>
+
+
+        <div class="step-container">
+
+
+            <div class="step">
+
+                <div class="number">
+                    1
+                </div>
+
+                <h3>
+                    Daftar
+                </h3>
+
+                <p>
+                    Isi formulir pendaftaran
+                    distributor KICK SUPPLY.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="number">
+                    2
+                </div>
+
+                <h3>
+                    Verifikasi
+                </h3>
+
+                <p>
+                    Tim kami akan memeriksa
+                    data dan kebutuhan kerja sama.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="number">
+                    3
+                </div>
+
+                <h3>
+                    Pilih Produk
+                </h3>
+
+                <p>
+                    Tentukan produk dan jumlah
+                    barang yang ingin dipesan.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="number">
+                    4
+                </div>
+
+                <h3>
+                    Mulai Kerja Sama
+                </h3>
+
+                <p>
+                    Pesanan diproses dan kerja sama
+                    dapat mulai berjalan.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FORM ================= -->
+
+    <section class="form-section" id="daftar">
+
+        <div class="form-box">
+
+            <h2>
+                DAFTAR DISTRIBUTOR
+            </h2>
+
+            <p>
+                Isi data berikut untuk mengajukan
+                kerja sama dengan KICK SUPPLY.
+            </p>
+
+
+            <form>
+
+
+                <label>
+                    Nama Lengkap
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Masukkan nama lengkap"
+                >
+
+
+                <label>
+                    Nama Toko / Bisnis
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Nama toko atau bisnis"
+                >
+
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    placeholder="Masukkan email"
+                >
+
+
+                <label>
+                    Nomor WhatsApp
+                </label>
+
+                <input
+                    type="tel"
+                    placeholder="08xxxxxxxxxx"
+                >
+
+
+                <label>
+                    Jenis Bisnis
+                </label>
+
+                <select>
+
+                    <option>
+                        Pilih jenis bisnis
+                    </option>
+
+                    <option>
+                        Toko Olahraga
+                    </option>
+
+                    <option>
+                        Reseller
+                    </option>
+
+                    <option>
+                        Klub Sepak Bola
+                    </option>
+
+                    <option>
+                        Sekolah / Akademi
+                    </option>
+
+                    <option>
+                        Komunitas
+                    </option>
+
+                    <option>
+                        Lainnya
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Pesan
+                </label>
+
+                <textarea
+                    placeholder="Jelaskan kebutuhan atau rencana kerja sama..."
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="submit"
+                >
+                    KIRIM PENDAFTARAN
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            KICKSUPPLY ⚽
+        </h3>
+
+        <p>
+            Your Football Gear, Your Best Performance.
+        </p>
+
+        <p>
+            © 2026 KICKSUPPLY. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
